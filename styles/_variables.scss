@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+$fontFamily: 'Manrope', sans-serif;
+$colors: (
+    topBg: #f1f5fe,
+    white: #ffffff,
+    darkPurple: #293356,
+    lightPurple: #848ead,
+    discount: #ff8d68,
+    discountBg: #feede8,
+    slidebarFill: #a4f3eb,
+    slidebarEmpty: #ecf0fb,
+    slidebarButton: #10d8c4,
+    slidebarArrows: #80fff3,
+    headerCircle: #cfd8ef,
+    btnText: #becdff,
+    monthlyHover: #7aeadf,
+);
+$font: (
+    size: (
+        micro: 10px,
+        mini: 12px,
+        xxs: 13px,
+        xs: 14px,
+        s: 15px,
+        m: 20px,
+        l: 28px,
+        xl: 32px,
+        xxl: 40px,
+    ),
+    weight: (
+        regular: 600,
+        bold: 800,
+    ),
+    lineHeight: (
+        one: 16px,
+        two: 19px,
+        three: 23px,
+        four: 27px,
+        five: 38.5px,
+        six: 44px,
+    ),
+    spacing: (
+        one: 1.71px,
+    ),
+);
+$boxShadow: (
+    full: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073),
+    circle: 0px 15px 30px rgba(0, 255, 231, 0.6),
+);
+$radius: (
+    smaller: 8px,
+    small: 9.5px,
+    medium: 15px,
+    large: 20.5px,
+    circle: 50%,
+);
+$innerCircleBorder: 1px solid map-get($colors, headerCircle);
+$startTrialBorder: 1px solid map-get($colors, slidebarEmpty);
+$cursor: url(/assets/images/cursor.png), pointer;

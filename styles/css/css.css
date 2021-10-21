@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body .topBg {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background-color: #f1f5fe;
+  border-bottom-left-radius: 191.5px;
+  z-index: -1;
+}
+* body .container {
+  justify-content: center;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  color: #848ead;
+  padding: 89px 24px 88px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container {
+    padding: 104px 450px 137px;
+  }
+}
+* body .container p {
+  font-size: 12px;
+}
+* body .container header {
+  position: relative;
+  padding: 0 0 64px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container header {
+    padding: 37px 0;
+    display: grid;
+    grid-template-areas: "h1 h1" "p1 p2";
+  }
+}
+* body .container header .circles {
+  position: absolute;
+  justify-self: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 146px;
+  height: 145px;
+  margin: 0 auto;
+  z-index: -1;
+}
+* body .container header .circles .circle1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 1px solid #cfd8ef;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+}
+* body .container header .circles .circle2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #cfd8ef;
+  border-radius: 50%;
+  width: 81px;
+  height: 81px;
+}
+* body .container header h1 {
+  color: #293356;
+  font-size: 20px;
+  line-height: 27px;
+  padding: 32px 0 8px 0;
+}
+@media screen and (min-width: 1440px) {
+  * body .container header h1 {
+    grid-area: h1;
+    font-size: 28px;
+    line-height: 38.5px;
+    padding: 0px 0 12px 0;
+  }
+}
+* body .container header .para1 {
+  grid-area: p1;
+  justify-self: flex-end;
+}
+* body .container header .para2 {
+  grid-area: p2;
+  justify-self: flex-start;
+}
+* body .container header p {
+  font-size: 13px;
+  line-height: 23px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container header p {
+    font-size: 15px;
+  }
+}
+* body .container main {
+  background-color: #ffffff;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  border-radius: 8px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main {
+    margin-top: 53px;
+    display: grid;
+    grid-template-areas: "pageView subCost" "slider slider" "billing billing" "startTrial startTrial";
+  }
+}
+* body .container main .pageViews {
+  padding: 34px 0 25px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.71px;
+  font-weight: 800;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .pageViews {
+    grid-area: pageView;
+    justify-self: start;
+    padding: 58px 0 42px 46px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .slider {
+    grid-area: slider;
+    margin: 0 48px;
+  }
+}
+* body .container main .subscriptionCost {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  align-items: center;
+  padding: 24px 0 34px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .subscriptionCost {
+    grid-area: subCost;
+    justify-self: end;
+    align-self: start;
+    padding: 40px 48px 0 0;
+    font-size: unset;
+  }
+}
+* body .container main .subscriptionCost span {
+  color: #293356;
+  font-size: 32px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .subscriptionCost span {
+    font-size: 40px;
+  }
+}
+* body .container main .billing {
+  display: grid;
+  grid-template-areas: "monthly yearly";
+  grid-area: billing;
+  justify-content: end;
+  padding: 0 11px 0 0;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .billing {
+    padding: 40px 65px 40px 0;
+  }
+}
+* body .container main .billing div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+* body .container main .billing input {
+  width: 40px;
+}
+* body .container main .billing .monthly {
+  grid-area: monthly;
+  align-items: center;
+}
+* body .container main .billing .monthly .monthlyBilling {
+  padding: 0 12px 0 0;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .billing .monthly .monthlyBilling {
+    padding: 0 16px 0 16px;
+  }
+}
+* body .container main .billing .monthly .outer {
+  width: 43px;
+  height: 22px;
+  border-radius: 15px;
+  background-color: #cfd8ef;
+  padding: 4px;
+  justify-content: start;
+}
+* body .container main .billing .monthly .outer:hover {
+  cursor: url(/assets/images/cursor.png), pointer;
+  background-color: #7aeadf;
+}
+* body .container main .billing .monthly .outer .one {
+  transform: translateX(21px);
+}
+* body .container main .billing .monthly .outer .inner {
+  transition: ease 0.2s;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  align-self: center;
+}
+* body .container main .billing .monthly .activeBg {
+  background-color: #7aeadf;
+}
+* body .container main .billing .yearly {
+  grid-area: yearly;
+  align-items: center;
+}
+* body .container main .billing .yearly .yearlyBilling {
+  padding: 0 5px 0 12px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .billing .yearly .yearlyBilling {
+    padding: 0 9px 0 16px;
+  }
+}
+* body .container main .billing .yearly button {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  color: #ff8d68;
+  background-color: #feede8;
+  border-radius: 9.5px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 7px 3px 6px;
+}
+* body .container main .billing .yearly .show {
+  display: block;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .billing .yearly .show {
+    display: none;
+  }
+}
+* body .container main .billing .yearly .hide {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .billing .yearly .hide {
+    display: block;
+  }
+}
+* body .container main .startTrial {
+  padding: 38px 0 32px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .startTrial {
+    display: grid;
+    grid-area: startTrial;
+    grid-template-areas: "perks button";
+    border-top: 1px solid #ecf0fb;
+    padding: 0;
+  }
+}
+* body .container main .startTrial .perks {
+  display: grid;
+  row-gap: 10px;
+  padding: 0 0 32px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .startTrial .perks {
+    grid-area: perks;
+    text-align: left;
+    justify-self: start;
+    align-self: end;
+    padding: 32px 0 32px 48px;
+  }
+}
+* body .container main .startTrial .perks p img {
+  padding: 0 16px 0 0;
+}
+* body .container main .startTrial .btn {
+  padding: 12px 46px 13px;
+  border: none;
+  background-color: #293356;
+  border-radius: 20.5px;
+  color: #becdff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+}
+@media screen and (min-width: 1440px) {
+  * body .container main .startTrial .btn {
+    justify-self: center;
+    align-self: center;
+    grid-area: button;
+  }
+}
+* body .container main .startTrial .btn:hover {
+  cursor: url(/assets/images/cursor.png), pointer;
+}
+
+/*# sourceMappingURL=css.css.map */

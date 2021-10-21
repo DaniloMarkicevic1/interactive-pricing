@@ -1,0 +1,296 @@
+@use './variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    body {
+        .topBg {
+            position: absolute;
+            height: 50%;
+            width: 100%;
+            background-color: map-get($colors, topBg);
+            border-bottom-left-radius: 191.5px;
+            z-index: -1;
+        }
+        .container {
+            justify-content: center;
+            text-align: center;
+            font-family: $fontFamily;
+            color: map-get($colors, lightPurple);
+            padding: 89px 24px 88px;
+            @media screen and (min-width: 1440px) {
+                padding: 104px 450px 137px;
+            }
+            p {
+                font-size: map-get($font, size, mini);
+            }
+            header {
+                position: relative;
+                padding: 0 0 64px;
+                @media screen and (min-width: 1440px) {
+                    padding: 37px 0;
+                    display: grid;
+                    grid-template-areas:
+                        'h1 h1'
+                        'p1 p2';
+                }
+                .circles {
+                    position: absolute;
+                    justify-self: center;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 146px;
+                    height: 145px;
+                    margin: 0 auto;
+                    z-index: -1;
+                    @media screen and (min-width: 1440px) {
+                        // top: -
+                    }
+                    .circle1 {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        border: $innerCircleBorder;
+                        border-radius: map-get($radius, circle);
+                        width: 125px;
+                        height: 125px;
+                    }
+                    .circle2 {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        border: $innerCircleBorder;
+                        border-radius: map-get($radius, circle);
+                        width: 81px;
+                        height: 81px;
+                    }
+                }
+                h1 {
+                    color: map-get($colors, darkPurple);
+                    font-size: map-get($font, size, m);
+                    line-height: map-get($font, lineHeight, four);
+                    padding: 32px 0 8px 0;
+                    @media screen and (min-width: 1440px) {
+                        grid-area: h1;
+                        font-size: map-get($font, size, l);
+                        line-height: map-get($font, lineHeight, five);
+                        padding: 0px 0 12px 0;
+                    }
+                }
+                .para1 {
+                    grid-area: p1;
+                    justify-self: flex-end;
+                }
+                .para2 {
+                    grid-area: p2;
+                    justify-self: flex-start;
+                    @media screen and (min-width: 1440px) {
+                    }
+                }
+                p {
+                    font-size: map-get($font, size, xxs);
+                    line-height: map-get($font, lineHeight, three);
+                    @media screen and (min-width: 1440px) {
+                        font-size: map-get($font, size, s);
+                    }
+                }
+            }
+            main {
+                background-color: map-get($colors, white);
+                box-shadow: map-get($boxShadow, full);
+                border-radius: map-get($radius, smaller);
+                @media screen and (min-width: 1440px) {
+                    margin-top: 53px;
+                    display: grid;
+                    grid-template-areas:
+                        'pageView subCost'
+                        'slider slider'
+                        'billing billing'
+                        'startTrial startTrial';
+                }
+                .pageViews {
+                    padding: 34px 0 25px;
+                    text-transform: uppercase;
+                    font-size: map-get($font, size, mini);
+                    letter-spacing: map-get($font, spacing, one);
+                    font-weight: map-get($font, weight, bold);
+                    @media screen and(min-width:1440px) {
+                        grid-area: pageView;
+                        justify-self: start;
+                        padding: 58px 0 42px 46px;
+                        font-size: map-get($font, size, xs);
+                    }
+                }
+                .slider {
+                    @media screen and(min-width:1440px) {
+                        grid-area: slider;
+                        margin: 0 48px;
+                    }
+                }
+                .subscriptionCost {
+                    display: flex;
+                    justify-content: center;
+                    font-size: map-get($font, size, xs);
+                    align-items: center;
+                    padding: 24px 0 34px;
+                    @media screen and(min-width:1440px) {
+                        grid-area: subCost;
+                        justify-self: end;
+                        align-self: start;
+                        padding: 40px 48px 0 0;
+                        font-size: unset;
+                    }
+                    span {
+                        color: map-get($colors, darkPurple);
+                        font-size: map-get($font, size, xl);
+                        @media screen and(min-width:1440px) {
+                            font-size: map-get($font, size, xxl);
+                        }
+                    }
+                }
+                .billing {
+                    display: grid;
+                    grid-template-areas: 'monthly yearly';
+                    grid-area: billing;
+                    justify-content: end;
+                    padding: 0 11px 0 0;
+                    @media screen and(min-width:1440px) {
+                        padding: 40px 65px 40px 0;
+                    }
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                    }
+                    input {
+                        width: 40px;
+                    }
+                    .monthly {
+                        grid-area: monthly;
+                        align-items: center;
+                        .monthlyBilling {
+                            padding: 0 12px 0 0;
+                            @media screen and(min-width:1440px) {
+                                padding: 0 16px 0 16px;
+                            }
+                        }
+
+                        .outer {
+                            width: 43px;
+                            height: 22px;
+                            border-radius: map-get($radius, medium);
+                            background-color: map-get($colors, headerCircle);
+                            padding: 4px;
+                            justify-content: start;
+                            &:hover {
+                                cursor: $cursor;
+                                background-color: map-get(
+                                    $colors,
+                                    monthlyHover
+                                );
+                            }
+                            .one {
+                                transform: translateX(21px);
+                            }
+                            .inner {
+                                transition: ease 0.2s;
+                                width: 14px;
+                                height: 14px;
+                                border-radius: map-get($radius, circle);
+                                background-color: map-get($colors, white);
+                                align-self: center;
+                            }
+                        }
+                        .activeBg {
+                            background-color: map-get($colors, monthlyHover);
+                        }
+                    }
+                    .yearly {
+                        grid-area: yearly;
+                        align-items: center;
+
+                        .yearlyBilling {
+                            padding: 0 5px 0 12px;
+                            @media screen and(min-width:1440px) {
+                                padding: 0 9px 0 16px;
+                            }
+                        }
+                        button {
+                            font-family: $fontFamily;
+                            font-size: map-get($font, size, micro);
+                            font-weight: map-get($font, weight, bold);
+                            color: map-get($colors, discount);
+                            background-color: map-get($colors, discountBg);
+                            border-radius: map-get($radius, small);
+                            border: none;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            padding: 2px 7px 3px 6px;
+                        }
+                        .show {
+                            display: block;
+                            @media screen and(min-width:1440px) {
+                                display: none;
+                            }
+                        }
+                        .hide {
+                            display: none;
+                            @media screen and(min-width:1440px) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .startTrial {
+                    padding: 38px 0 32px;
+                    @media screen and(min-width:1440px) {
+                        display: grid;
+                        grid-area: startTrial;
+                        grid-template-areas: 'perks button';
+                        border-top: $startTrialBorder;
+                        padding: 0;
+                    }
+                    .perks {
+                        display: grid;
+                        row-gap: 10px;
+                        padding: 0 0 32px;
+                        @media screen and(min-width:1440px) {
+                            grid-area: perks;
+                            text-align: left;
+                            justify-self: start;
+                            align-self: end;
+                            padding: 32px 0 32px 48px;
+                        }
+                        p {
+                            img {
+                                padding: 0 16px 0 0;
+                            }
+                        }
+                    }
+                    .btn {
+                        padding: 12px 46px 13px;
+                        border: none;
+                        background-color: map-get($colors, darkPurple);
+                        border-radius: map-get($radius, large);
+                        color: map-get($colors, btnText);
+                        font-family: $fontFamily;
+                        font-weight: map-get($font, weight, bold);
+                        font-size: map-get($font, size, mini);
+                        @media screen and(min-width:1440px) {
+                            justify-self: center;
+                            align-self: center;
+                            grid-area: button;
+                        }
+                        &:hover {
+                            cursor: $cursor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
