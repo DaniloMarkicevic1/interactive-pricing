@@ -126,10 +126,119 @@
     font-size: 14px;
   }
 }
+* body .container main #slider {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  padding: 0 24px;
+}
+* body .container main #slider:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+* body .container main #slider::-webkit-slider-runnable-track {
+  height: 8px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ecf0fb;
+}
+* body .container main #slider:focus::-webkit-slider-runnable-track {
+  background-color: #a4f3eb;
+}
+* body .container main #slider::-moz-range-progress {
+  height: 8px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #a4f3eb;
+}
+* body .container main #slider::-moz-range-track {
+  height: 8px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ecf0fb;
+}
+* body .container main #slider::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+* body .container main #slider ::-ms-fill-lower {
+  background: #a4f3eb;
+  border-radius: 5px;
+}
+* body .container main #slider :focus::-ms-fill-lower {
+  background: #a4f3eb;
+}
+* body .container main #slider ::-ms-fill-upper {
+  background: #ecf0fb;
+}
+* body .container main #slider :focus::-ms-fill-upper {
+  background: #ecf0fb;
+}
+* body .container main #slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: #10d8c4;
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+  border-radius: 50%;
+}
+* body .container main #slider::-webkit-slider-thumb:hover {
+  cursor: url(/assets/images/cursor.png), pointer;
+}
+* body .container main #slider::-webkit-slider-thumb:active {
+  background-color: #24aea1;
+  background-image: url(/assets/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: url(/assets/images/cursorActive.png), pointer;
+}
+* body .container main #slider::-moz-range-thumb {
+  margin-top: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: #10d8c4;
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+  border-radius: 50%;
+}
+* body .container main #slider::-moz-range-thumb:hover {
+  cursor: url(/assets/images/cursor.png), pointer;
+}
+* body .container main #slider::-moz-range-thumb:active {
+  background-color: #24aea1;
+  background-image: url(/assets/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: url(/assets/images/cursorActive.png), pointer;
+}
+* body .container main #slider::-ms-thumb {
+  margin-top: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: #10d8c4;
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+  border-radius: 50%;
+}
+* body .container main #slider::-ms-thumb:hover {
+  cursor: url(/assets/images/cursor.png), pointer;
+}
+* body .container main #slider::-ms-thumb:active {
+  background-color: #24aea1;
+  background-image: url(/assets/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: url(/assets/images/cursorActive.png), pointer;
+}
 @media screen and (min-width: 1440px) {
   * body .container main #slider {
     grid-area: slider;
-    margin: 0 48px;
+    padding: 0 48px;
   }
 }
 * body .container main .subscriptionCost {

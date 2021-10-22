@@ -125,9 +125,122 @@
                     }
                 }
                 #slider {
+                    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+                    width: 100%; /* Specific width is required for Firefox. */
+                    background: transparent; /* Otherwise white in Chrome */
+                    &:focus {
+                        outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+                    }
+                    &::-webkit-slider-runnable-track {
+                        height: 8px;
+                        width: 100%;
+                        border-radius: map-get($radius, track);
+                        background-color: map-get($colors, slidebarEmpty);
+                    }
+
+                    &:focus::-webkit-slider-runnable-track {
+                        background-color: map-get($colors, slidebarFill);
+                    }
+                    &::-moz-range-progress {
+                        height: 8px;
+                        width: 100%;
+                        border-radius: map-get($radius, track);
+                        background-color: map-get($colors, slidebarFill);
+                    }
+                    &::-moz-range-track {
+                        height: 8px;
+                        width: 100%;
+                        border-radius: map-get($radius, track);
+                        background-color: map-get($colors, slidebarEmpty);
+                    }
+                    &::-ms-track {
+                        width: 100%;
+                        cursor: pointer;
+                        background: transparent;
+                        border-color: transparent;
+                        color: transparent;
+                    }
+                    ::-ms-fill-lower {
+                        background: map-get($colors, slidebarFill);
+                        border-radius: map-get($radius, track);
+                    }
+                    :focus::-ms-fill-lower {
+                        background: map-get($colors, slidebarFill);
+                    }
+                    ::-ms-fill-upper {
+                        background: map-get($colors, slidebarEmpty);
+                    }
+                    :focus::-ms-fill-upper {
+                        background: map-get($colors, slidebarEmpty);
+                    }
+                    &::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        margin-top: -15px;
+                        width: 40px;
+                        height: 40px;
+                        background-color: map-get($colors, slidebarButton);
+                        box-shadow: map-get($boxShadow, circle);
+                        border-radius: map-get($radius, circle);
+                        &:hover {
+                            cursor: $cursor;
+                        }
+                        &:active {
+                            background-color: map-get(
+                                $colors,
+                                slidebarButtonActive
+                            );
+                            background-image: $thumbBgImage;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            cursor: $active;
+                        }
+                    }
+                    &::-moz-range-thumb {
+                        margin-top: -15px;
+                        width: 40px;
+                        height: 40px;
+                        background-color: map-get($colors, slidebarButton);
+                        box-shadow: map-get($boxShadow, circle);
+                        border-radius: map-get($radius, circle);
+                        &:hover {
+                            cursor: $cursor;
+                        }
+                        &:active {
+                            background-color: map-get(
+                                $colors,
+                                slidebarButtonActive
+                            );
+                            background-image: $thumbBgImage;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            cursor: $active;
+                        }
+                    }
+                    &::-ms-thumb {
+                        margin-top: -15px;
+                        width: 40px;
+                        height: 40px;
+                        background-color: map-get($colors, slidebarButton);
+                        box-shadow: map-get($boxShadow, circle);
+                        border-radius: map-get($radius, circle);
+                        &:hover {
+                            cursor: $cursor;
+                        }
+                        &:active {
+                            background-color: map-get(
+                                $colors,
+                                slidebarButtonActive
+                            );
+                            background-image: $thumbBgImage;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            cursor: $active;
+                        }
+                    }
+                    padding: 0 24px;
                     @media screen and(min-width:1440px) {
                         grid-area: slider;
-                        margin: 0 48px;
+                        padding: 0 48px;
                     }
                 }
                 .subscriptionCost {

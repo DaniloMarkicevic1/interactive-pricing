@@ -11,6 +11,7 @@ $colors: (
     slidebarFill: #a4f3eb,
     slidebarEmpty: #ecf0fb,
     slidebarButton: #10d8c4,
+    slidebarButtonActive: #24aea1,
     slidebarArrows: #80fff3,
     headerCircle: #cfd8ef,
     btnText: #becdff,
@@ -49,6 +50,7 @@ $boxShadow: (
     circle: 0px 15px 30px rgba(0, 255, 231, 0.6),
 );
 $radius: (
+    track: 5px,
     smaller: 8px,
     small: 9.5px,
     medium: 15px,
@@ -58,3 +60,5 @@ $radius: (
 $innerCircleBorder: 1px solid map-get($colors, headerCircle);
 $startTrialBorder: 1px solid map-get($colors, slidebarEmpty);
 $cursor: url(/assets/images/cursor.png), pointer;
+$active: url(/assets/images/cursorActive.png), pointer;
+$thumbBgImage: url(/assets/images/icon-slider.svg);
