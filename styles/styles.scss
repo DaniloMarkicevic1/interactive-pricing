@@ -125,14 +125,13 @@
                     }
                 }
                 #slider {
-                    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-                    width: 100% -24px; /* Specific width is required for Firefox. */
-                    background: transparent; /* Otherwise white in Chrome */
+                    -webkit-appearance: none;
+                    width: 100% -24px;
+                    background: transparent;
                     margin: 15.8px 24px;
                     border-radius: map-get($radius, track);
-
                     &:focus {
-                        outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+                        outline: none;
                         background-color: none;
                     }
                     &::-webkit-slider-runnable-track {
@@ -318,10 +317,6 @@
                             justify-content: start;
                             &:hover {
                                 cursor: $cursor;
-                                // background-color: map-get(
-                                //     $colors,
-                                //     monthlyHover
-                                // );
                             }
                             .one {
                                 transform: translateX(21px);
