@@ -124,7 +124,7 @@
                         font-size: map-get($font, size, xs);
                     }
                 }
-                .slider {
+                #slider {
                     @media screen and(min-width:1440px) {
                         grid-area: slider;
                         margin: 0 48px;
@@ -177,7 +177,6 @@
                                 padding: 0 16px 0 16px;
                             }
                         }
-
                         .outer {
                             width: 43px;
                             height: 22px;
@@ -187,10 +186,10 @@
                             justify-content: start;
                             &:hover {
                                 cursor: $cursor;
-                                background-color: map-get(
-                                    $colors,
-                                    monthlyHover
-                                );
+                                // background-color: map-get(
+                                //     $colors,
+                                //     monthlyHover
+                                // );
                             }
                             .one {
                                 transform: translateX(21px);

@@ -127,7 +127,7 @@
   }
 }
 @media screen and (min-width: 1440px) {
-  * body .container main .slider {
+  * body .container main #slider {
     grid-area: slider;
     margin: 0 48px;
   }
@@ -199,7 +199,6 @@
 }
 * body .container main .billing .monthly .outer:hover {
   cursor: url(/assets/images/cursor.png), pointer;
-  background-color: #7aeadf;
 }
 * body .container main .billing .monthly .outer .one {
   transform: translateX(21px);
