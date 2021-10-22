@@ -126,20 +126,27 @@
                 }
                 #slider {
                     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-                    width: 100%; /* Specific width is required for Firefox. */
+                    width: 100% -24px; /* Specific width is required for Firefox. */
                     background: transparent; /* Otherwise white in Chrome */
+                    margin: 15.8px 24px;
+                    border-radius: map-get($radius, track);
+
                     &:focus {
                         outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+                        background-color: none;
                     }
                     &::-webkit-slider-runnable-track {
+                        -webkit-appearance: none;
+                        color: #13bba4;
                         height: 8px;
-                        width: 100%;
+                        background: linear-gradient(
+                            to right,
+                            map-get($colors, slidebarFill) 0%,
+                            map-get($colors, slidebarFill) 50%
+                                map-get($colors, slidebarEmpty) 50%,
+                            map-get($colors, slidebarEmpty) 100%
+                        );
                         border-radius: map-get($radius, track);
-                        background-color: map-get($colors, slidebarEmpty);
-                    }
-
-                    &:focus::-webkit-slider-runnable-track {
-                        background-color: map-get($colors, slidebarFill);
                     }
                     &::-moz-range-progress {
                         height: 8px;
@@ -180,7 +187,20 @@
                         height: 40px;
                         background-color: map-get($colors, slidebarButton);
                         box-shadow: map-get($boxShadow, circle);
+                        background: #10f3c4;
+                        border: none;
                         border-radius: map-get($radius, circle);
+                        cursor: $cursor;
+                        -webkit-appearance: none;
+                        @media screen and(max-width:640px) {
+                            background-image: $thumbBgImage;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-color: map-get(
+                                $colors,
+                                slidebarButtonActive
+                            );
+                        }
                         &:hover {
                             cursor: $cursor;
                         }
@@ -237,10 +257,9 @@
                             cursor: $active;
                         }
                     }
-                    padding: 0 24px;
                     @media screen and(min-width:1440px) {
                         grid-area: slider;
-                        padding: 0 48px;
+                        margin: 15.8px 48px;
                     }
                 }
                 .subscriptionCost {

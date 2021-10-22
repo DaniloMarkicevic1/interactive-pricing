@@ -16,11 +16,15 @@ monthly.addEventListener('click', (e) => {
     }
 });
 
-function myFunction() {
-    const x = document.querySelector('#slider');
-    const defaultVal = x.defaultValue;
-    const currentVal = x.value;
-    switch (currentVal) {
+function rangeFunc() {
+    var value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+    slider.style.background =
+        'linear-gradient(to right, #82CFD0 0%, #82CFD0 ' +
+        value +
+        '%, #fff ' +
+        value +
+        '%, white 100%)';
+    switch (slider.value) {
         case '0':
             views.innerText = '10K';
             cost.innerText = '$8';
