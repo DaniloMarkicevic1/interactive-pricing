@@ -130,32 +130,36 @@
                     background: transparent;
                     margin: 15.8px 24px;
                     border-radius: map-get($radius, track);
+                    border: none;
                     &:focus {
                         outline: none;
                         background-color: none;
                     }
                     &::-webkit-slider-runnable-track {
                         -webkit-appearance: none;
-                        color: #13bba4;
                         height: 8px;
-                        background: linear-gradient(
+                        background-color: linear-gradient(
                             to right,
                             map-get($colors, slidebarFill) 0%,
-                            map-get($colors, slidebarFill) 50%
-                                map-get($colors, slidebarEmpty) 50%,
+                            map-get($colors, slidebarFill) 50%,
+                            map-get($colors, slidebarEmpty) 50%,
                             map-get($colors, slidebarEmpty) 100%
                         );
                         border-radius: map-get($radius, track);
                     }
                     &::-moz-range-progress {
+                        background: transparent;
                         height: 8px;
                         width: 100%;
+                        border: none;
                         border-radius: map-get($radius, track);
                         background-color: map-get($colors, slidebarFill);
                     }
                     &::-moz-range-track {
+                        background: transparent;
                         height: 8px;
                         width: 100%;
+                        border: none;
                         border-radius: map-get($radius, track);
                         background-color: map-get($colors, slidebarEmpty);
                     }
@@ -172,12 +176,15 @@
                     }
                     :focus::-ms-fill-lower {
                         background: map-get($colors, slidebarFill);
+                        border-radius: map-get($radius, track);
                     }
                     ::-ms-fill-upper {
                         background: map-get($colors, slidebarEmpty);
+                        border-radius: map-get($radius, track);
                     }
                     :focus::-ms-fill-upper {
                         background: map-get($colors, slidebarEmpty);
+                        border-radius: map-get($radius, track);
                     }
                     &::-webkit-slider-thumb {
                         -webkit-appearance: none;
@@ -218,6 +225,7 @@
                         margin-top: -15px;
                         width: 40px;
                         height: 40px;
+                        border: none;
                         background-color: map-get($colors, slidebarButton);
                         box-shadow: map-get($boxShadow, circle);
                         border-radius: map-get($radius, circle);
@@ -274,11 +282,13 @@
                         padding: 40px 48px 0 0;
                         font-size: unset;
                     }
-                    span {
+                    .cost {
                         color: map-get($colors, darkPurple);
                         font-size: map-get($font, size, xl);
+                        padding: 0 10px 0 0;
                         @media screen and(min-width:1440px) {
                             font-size: map-get($font, size, xxl);
+                            padding: 0 8px 0 0;
                         }
                     }
                 }

@@ -6,7 +6,6 @@ const cost = document.querySelector('.cost');
 const views = document.querySelector('.views');
 
 monthly.addEventListener('click', (e) => {
-    console.log(e.target.classList[1]);
     if (circle.classList[1] === 'zero') {
         circle.classList.replace('zero', 'one');
         monthly.classList.add('activeBg');
@@ -15,15 +14,17 @@ monthly.addEventListener('click', (e) => {
         monthly.classList.remove('activeBg');
     }
 });
-
+console.log(slider.value);
+// views.innerText = '100K';
+// cost.innerText = '$16';
 function rangeFunc() {
     var value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
     slider.style.background =
-        'linear-gradient(to right, #82CFD0 0%, #82CFD0 ' +
+        'linear-gradient(to right, #A4F3EB 0%, #A4F3EB ' +
         value +
-        '%, #fff ' +
+        '%, #ecf0fb ' +
         value +
-        '%, white 100%)';
+        '%, #ecf0fb 100%)';
     switch (slider.value) {
         case '0':
             views.innerText = '10K';
